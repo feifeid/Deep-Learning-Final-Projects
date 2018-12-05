@@ -17,6 +17,7 @@ def get_img_paths_from_img_folder(img_dir):
     img_paths = []
     for filename in os.listdir(img_dir):
         img_paths.append(img_dir + filename)
+    print(img_paths)
     return img_paths
     
     
