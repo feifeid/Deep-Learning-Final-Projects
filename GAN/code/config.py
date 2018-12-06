@@ -18,7 +18,7 @@ net_arg.add_argument('--c_num', type=int, default=2)  # Number of classes
 
 # Data
 data_arg = add_argument_group('Data')
-data_arg.add_argument('--dataset', type=str, default='cufs', choices=['cufs', 'celeba','celeba_small_sample'])
+data_arg.add_argument('--dataset', type=str, default='celeba_small_sample', choices=['cufs', 'celeba','celeba_small_sample'])
 data_arg.add_argument('--split', type=str, default='train_data')
 data_arg.add_argument('--batch_size', type=int, default=8)
 data_arg.add_argument('--batch_size_test', type=int, default=8)
@@ -45,7 +45,7 @@ misc_arg.add_argument('--test_iter', type=int, default=200)
 misc_arg.add_argument('--save_step', type=int, default=200)
 misc_arg.add_argument('--log_level', type=str, default='INFO', choices=['INFO', 'DEBUG', 'WARN'])
 misc_arg.add_argument('--log_dir', type=str, default='logs')
-misc_arg.add_argument('--data_dir', type=str, default='../../../data/')
+misc_arg.add_argument('--data_dir', type=str, default='/content/data/')
 misc_arg.add_argument('--random_seed', type=int, default=0)
 
 def get_config():
