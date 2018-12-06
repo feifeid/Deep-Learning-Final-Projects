@@ -16,7 +16,8 @@ def get_img_paths_from_txtfile(img_list_path, img_dir, start_index):
 def get_img_paths_from_img_folder(img_dir):
     img_paths = []
     for filename in os.listdir(img_dir):
-        img_paths.append(img_dir + filename)
+        if not filename.startswith('.'):
+            img_paths.append(img_dir + filename)
     print(img_paths)
     return img_paths
     
